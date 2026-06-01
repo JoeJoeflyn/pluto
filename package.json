@@ -1,0 +1,17 @@
+{
+  "name": "pluto",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local-first AI receipt scanner and expense tracker (monorepo root)",
+  "packageManager": "pnpm@9.0.0",
+  "scripts": {
+    "dev:api": "uvicorn --app-dir apps/api main:app --reload",
+    "dev:web": "pnpm --filter pluto-web dev",
+    "dev:cli": "cd apps/cli && go run .",
+    "build": "pnpm -r build"
+  },
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=9"
+  }
+}

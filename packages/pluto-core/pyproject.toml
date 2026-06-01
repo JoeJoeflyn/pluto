@@ -1,0 +1,14 @@
+[project]
+name = "pluto"
+version = "0.1.0"
+description = "Local-first AI receipt scanner and expense tracker"
+dependencies = [
+    "click>=8.1.0",
+    "pillow>=10.0.0",
+    "requests>=2.31.0",
+    "sqlalchemy>=2.0.0",
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"

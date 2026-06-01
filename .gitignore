@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Databases / local state
+*.db
+*.sqlite
+*.sqlite3
+expenses.db
+receipts/
+
+# CodeGraph local snapshot
+codedb.snapshot
+.codegraph/
+
+# Specs / design docs (kept local)
+docs/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+*.swp
+
+# Build / coverage
+dist/
+build/
+.coverage
+htmlcov/
+
+# Node (web app)
+node_modules/
+.next/
+.output/
+
+# Go (CLI)
+*.exe
+*.test
+*.out
