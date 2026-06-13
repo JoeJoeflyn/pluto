@@ -8,7 +8,11 @@
     "dev:api": "uvicorn --app-dir apps/api main:app --reload",
     "dev:web": "pnpm --filter pluto-web dev",
     "dev:cli": "cd apps/cli && go run .",
-    "build": "pnpm -r build"
+    "build": "pnpm -r build",
+    "lint": "pnpm lint:web && pnpm lint:api",
+    "lint:web": "pnpm --filter pluto-web typecheck",
+    "lint:api": "ruff check apps/api",
+    "typecheck": "pnpm lint:web"
   },
   "engines": {
     "node": ">=18",

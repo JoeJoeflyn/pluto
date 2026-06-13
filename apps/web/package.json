@@ -4,21 +4,23 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vinxi dev",
-    "build": "vinxi build",
-    "start": "vinxi start"
+    "dev": "vite",
+    "build": "vite build",
+    "typecheck": "vue-tsc --noEmit",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@tanstack/react-router": "latest",
-    "@tanstack/react-query": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "vinxi": "latest"
+    "@tanstack/vue-query": "^5.51.0",
+    "lucide-vue-next": "^0.400.0",
+    "vue": "^3.4.0",
+    "vue-router": "^4.3.0"
   },
   "devDependencies": {
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "typescript": "latest",
-    "vite": "latest"
+    "@tailwindcss/vite": "^4",
+    "@vitejs/plugin-vue": "^5.0.0",
+    "tailwindcss": "^4",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.3",
+    "vue-tsc": "^2.0.0"
   }
 }
