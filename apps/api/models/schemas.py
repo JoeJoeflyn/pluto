@@ -34,6 +34,46 @@ class LineItemOut(BaseModel):
         from_attributes: bool = True
 
 
+class ExpenseCreate(BaseModel):
+    date: date_type
+    amount: float
+    currency: str = "USD"
+    category: str
+    merchant: str
+    notes: str = ""
+    image_path: str = ""
+    time: str | None = None
+    subtotal: float | None = None
+    tax: float | None = None
+    tip: float | None = None
+    discount: float | None = None
+    payment_method: str | None = None
+    card_type: str | None = None
+    card_last4: str | None = None
+    cashier: str | None = None
+    transaction_id: str | None = None
+    reference_id: str | None = None
+    auth_id: str | None = None
+    address: str | None = None
+    phone: str | None = None
+    email: str | None = None
+    raw_text: str | None = None
+    line_items: list[LineItemIn] = Field(default_factory=list)
+
+
+class ExpenseUpdate(BaseModel):
+    amount: float | None = None
+    category: str | None = None
+    merchant: str | None = None
+    notes: str | None = None
+    date: date_type | None = None
+    currency: str | None = None
+    subtotal: float | None = None
+    tax: float | None = None
+    tip: float | None = None
+    payment_method: str | None = None
+
+
 class ExpenseOut(BaseModel):
     id: int
     date: date_type
